@@ -24,6 +24,7 @@ export const ParallelQueriesPage = () => {
           </div>
         );
       })}
+
       <h2>friends</h2>
       {friends?.data.map((friend) => {
         return <div> {friend.name}</div>;
