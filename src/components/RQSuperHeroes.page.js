@@ -1,5 +1,5 @@
 // Fetching Data with useQuery
-
+import { Link } from "react-router-dom";
 import { useSuperHeroesData } from "../hooks/useSuperHeroesData";
 
 export const RQSuperHeroPage = () => {
@@ -9,8 +9,10 @@ export const RQSuperHeroPage = () => {
   const onError = (error) => {
     console.log("Perform side effect after encoutering an error ", error);
   };
-  const { isLoading, data, isError, error, isFetching } =
-    useSuperHeroesData(onSuccess, onError);
+  const { isLoading, data, isError, error, isFetching } = useSuperHeroesData(
+    onSuccess,
+    onError
+  );
 
   console.log({ isLoading, isFetching });
 
@@ -27,7 +29,11 @@ export const RQSuperHeroPage = () => {
     <>
       <h2>RQ Super Heroes Page </h2>
       {data?.data.map((hero) => {
-        return <div key={hero.name}>{hero.name}</div>;
+        return (
+          <Link to={`/super-heroes/${hero.id}`}>
+            <div key={hero.id}>{hero.name}</div>
+          </Link>
+        );
       })}
     </>
   );
