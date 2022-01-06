@@ -26,5 +26,25 @@
     { "id": 2, "name": "Phoebe Buffay" },
     { "id": 3, "name": "Rechael Green" },
     { "id": 4, "name": "Chandler Bing" }
+  ],
+  "users": [
+    {
+      "id": "warui@gmail.com",
+      "channelId": "codevolution"
+    },
+    {
+      "id": "henry@gmail.com",
+      "channelId": "ruiwa"
+    }
+  ],
+  "channels": [
+    {
+      "id": "codevolution",
+      "courses": ["vue", "react", "angular"]
+    },
+    {
+      "id": "ruiwa",
+      "courses": ["php", "html", "css", "javascript"]
+    }
   ]
 }
