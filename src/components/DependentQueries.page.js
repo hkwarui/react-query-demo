@@ -24,18 +24,10 @@ export const DependentQueriesPage = ({ email }) => {
     }
   );
 
-  console.log({ user, courses });
-
-  const coursesArray = courses?.data.courses;
-  const dispalyCourses = (course) => {
-    <div>{course}</div>;
-  };
-  console.log(coursesArray);
-
   return (
     <div>
       <h2>DependentQueriesPage</h2>
-      {/* {coursesArray.forEach(dispalyCourses) */}
-    </div>
+      {courses?.data.courses.map((course)=>{return<div>{course} </div>})}
+     </div>
   );
 };
